@@ -1,3 +1,4 @@
-<p>
-  <input autofocus placeholder="What are you thinking?" [(ngModel)]="statusText" />{{statusText}}
-</p>
+<form class="status__form">
+  <input name="statusText" autofocus placeholder="What are you thinking?" [(ngModel)]="statusText" />
+  <button type="submit" class="status__submit">Post</button>
+</form>

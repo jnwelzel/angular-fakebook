@@ -1,0 +1,9 @@
+.status__form {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.status__submit {
+  margin-left: 10px;
+}
