@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { POSTS } from '../mock-posts';
+import { UserPostService } from '../user-post.service';
+import { Post } from '../post';
 
 @Component({
   selector: 'app-feed',
@@ -8,11 +9,16 @@ import { POSTS } from '../mock-posts';
   styleUrls: ['./feed.component.css']
 })
 export class FeedComponent implements OnInit {
-  posts = POSTS;
+  posts: Post[];
 
-  constructor() { }
+  constructor(private userPostService: UserPostService) { }
 
   ngOnInit() {
+    this.getFeedPosts();
+  }
+
+  getFeedPosts(): void {
+    this.posts = this.userPostService.getPosts();
   }
 
 }
