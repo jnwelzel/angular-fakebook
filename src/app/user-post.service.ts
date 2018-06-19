@@ -8,9 +8,15 @@ import { POSTS } from './mock-posts';
 })
 export class UserPostService {
 
-  constructor() { }
+  posts = POSTS;
+
+  constructor() {}
 
   getPosts(): Post[] {
-    return POSTS;
+    return this.posts;
+  }
+
+  addPost(post: Post) {
+    this.posts = [post].concat(this.posts);
   }
 }

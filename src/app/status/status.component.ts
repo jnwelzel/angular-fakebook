@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Post } from '../post';
+import { User } from '../user';
+import { UserPostService } from '../user-post.service';
+
 @Component({
   selector: 'app-status',
   templateUrl: './status.component.html',
@@ -8,10 +12,17 @@ import { Component, OnInit } from '@angular/core';
 export class StatusComponent implements OnInit {
 
   statusText = '';
+  currentUser: User = { id: 999, displayName: 'Jon Welzel', avatar: '' };
 
-  constructor() { }
+  constructor(private userPostService: UserPostService) { }
 
   ngOnInit() {
+  }
+
+  onSubmit(): void {
+    const newFeedPost: Post = {id: Date.now(), user: this.currentUser, text: this.statusText.trim(), timestamp: new Date() };
+    this.userPostService.addPost(newFeedPost);
+    this.statusText = '';
   }
 
 }
