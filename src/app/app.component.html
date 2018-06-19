@@ -1,9 +1,12 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <app-status></app-status>
-  <app-friends></app-friends>
-  <app-feed></app-feed>
+<div>
+  <mat-toolbar color="primary">Fakebook</mat-toolbar>
+  <div class="app__container">
+    <div class="app__friends">
+      <app-friends></app-friends>
+    </div>
+    <div class="app__feed">
+      <app-status></app-status>
+      <app-feed></app-feed>
+    </div>
+  </div>
 </div>

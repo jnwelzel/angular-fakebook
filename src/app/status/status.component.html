@@ -1,4 +1,6 @@
 <form (ngSubmit)="onSubmit()" #statusForm="ngForm" class="status__form">
-  <input type="text" name="statusText" autofocus placeholder="What's on your mind?" [(ngModel)]="statusText" />
-  <button type="submit" class="status__submit">Post</button>
+  <mat-form-field>
+    <input matInput type="text" name="statusText" autofocus placeholder="What's on your mind?" [(ngModel)]="statusText" />
+  </mat-form-field>
+  <button mat-flat-button type="submit" class="status__submit">Post</button>
 </form>

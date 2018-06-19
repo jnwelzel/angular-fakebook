@@ -1,8 +1,16 @@
-<h2>My Feed</h2>
-<ul class="feed__ul">
-  <li *ngFor="let post of userPostService.posts" class="feed__li">
-    <span>{{post.user.displayName}}</span>
-    <span>"{{post.text}}"</span>
-    <span>{{post.timestamp | date: 'short'}}</span>
-  </li>
-</ul>
+<div>
+  <mat-card *ngFor="let post of userPostService.posts" class="feed__card">
+    <mat-card-header>
+      <div mat-card-avatar [style.background-image]="'url(' + post.user.avatar + ')'" class="feed__card_avatar"></div>
+      <mat-card-title>{{post.user.displayName}}</mat-card-title>
+      <mat-card-subtitle>{{post.timestamp | date: 'short'}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      {{post.text}}
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

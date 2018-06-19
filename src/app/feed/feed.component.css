@@ -1,10 +1,10 @@
-.feed__ul {
-  padding: 0;
-}
-
-.feed__li {
+.feed__card {
   display: flex;
   flex-direction: column;
   list-style-type: none;
   margin-bottom: 10px;
+}
+
+.feed__card_avatar {
+  background-size: cover;
 }

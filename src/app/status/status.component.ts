@@ -12,7 +12,7 @@ import { UserPostService } from '../user-post.service';
 export class StatusComponent implements OnInit {
 
   statusText = '';
-  currentUser: User = { id: 999, displayName: 'Jon Welzel', avatar: '' };
+  currentUser: User = { id: 999, displayName: 'Jon Welzel', avatar: '/assets/jon_welzel.jpg' };
 
   constructor(private userPostService: UserPostService) { }
 
