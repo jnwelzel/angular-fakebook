@@ -1,0 +1,8 @@
+<h2>My Feed</h2>
+<ul class="feed__ul">
+  <li *ngFor="let post of posts" class="feed__li">
+    <span>{{post.user.displayName}}</span>
+    <span>{{post.text}}</span>
+    <span>{{post.timestamp | date: 'short'}}</span>
+  </li>
+</ul>

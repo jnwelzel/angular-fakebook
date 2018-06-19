@@ -1,0 +1,10 @@
+.feed__ul {
+  padding: 0;
+}
+
+.feed__li {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
