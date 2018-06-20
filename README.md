@@ -15,4 +15,4 @@ How I went about things
 ## 06-19
 - Worked on styling
 - Finished the status bar + feed
-- Gotta work on the friends section now
+- Finished the friends section
