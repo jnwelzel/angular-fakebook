@@ -1,0 +1,10 @@
+.friends__displayName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 150px;
+}
+
+.friends__avatar {
+  background-size: contain;
+}

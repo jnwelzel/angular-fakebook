@@ -3,8 +3,9 @@
   flex-direction: column;
   list-style-type: none;
   margin-bottom: 10px;
+  width: 480px;
 }
 
 .feed__card_avatar {
-  background-size: cover;
+  background-size: contain;
 }

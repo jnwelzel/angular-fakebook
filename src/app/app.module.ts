@@ -1,7 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatToolbarModule, MatButtonModule, MatInputModule, MatCardModule } from '@angular/material';
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatInputModule,
+  MatCardModule,
+  MatListModule
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,7 +29,8 @@ import { FriendsComponent } from './friends/friends.component';
     MatToolbarModule,
     MatButtonModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
