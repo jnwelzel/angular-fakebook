@@ -20,6 +20,11 @@ export class StatusComponent implements OnInit {
   }
 
   onSubmit(): void {
+    console.log('ayyy');
+    if (!this.statusText.trim().length) {
+      return;
+    }
+
     const newFeedPost: Post = {id: Date.now(), user: this.currentUser, text: this.statusText.trim(), timestamp: new Date() };
     this.userPostService.addPost(newFeedPost);
     this.statusText = '';
