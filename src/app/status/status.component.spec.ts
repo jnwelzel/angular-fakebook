@@ -26,4 +26,14 @@ describe('StatusComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a text input', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('input[type="text"]')).toBeTruthy();
+  });
+
+  it('should have a submit button', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('button[type="submit"]')).toBeTruthy();
+  });
 });

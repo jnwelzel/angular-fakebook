@@ -20,7 +20,6 @@ export class StatusComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log('ayyy');
     if (!this.statusText.trim().length) {
       return;
     }
