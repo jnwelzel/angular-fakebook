@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatListModule } from '@angular/material';
 
 import { FriendsComponent } from './friends.component';
 
@@ -8,7 +9,8 @@ describe('FriendsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FriendsComponent ]
+      declarations: [ FriendsComponent ],
+      imports: [MatListModule]
     })
     .compileComponents();
   }));
